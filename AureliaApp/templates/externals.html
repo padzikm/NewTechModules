@@ -1,0 +1,17 @@
+<template>
+  <section class="au-animate">
+    <form role="form">
+      <div class="form-group">
+        <label>Decorated text</label>
+        <p class="help-block">${decoratedText}</p>
+      </div>
+      <div class="form-group">
+        <label for="fn">Text</label>
+        <input type="text" value.bind="text" class="form-control" id="fn">
+      </div>
+      <div>
+        <button click.delegate="decorate()" class="btn btn-default">Test requirejs</button>
+      </div>
+    </form>
+  </section>
+</template>

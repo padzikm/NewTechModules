@@ -1,0 +1,38 @@
+﻿<div aurelia-app="main">
+    <!--<div class="splash">
+        <div class="message">Aurelia Navigation Skeleton</div>
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>-->
+</div>
+
+<link rel="stylesheet" href="/aureliaapp/wwwroot/styles/site.css" />
+
+<script>
+    require(['text!/aureliaapp/wwwroot/jspm_packages/system.js', 'text!/aureliaapp/wwwroot/config.js'],
+        function(system, config) {
+            var Router = Backbone.Router.extend({
+                routes: {
+                    "aurelia*any": function() {}
+                },
+                execute: function() { return false; }
+            });
+            var router = new Router();
+            Backbone.Events.once("changeRouteEvent",
+                function() {
+                    Backbone.history.handlers.splice(0, 1);
+                    window.System = null;
+                });
+            window.System = null;
+            if (window.AureliaSystem)
+                window.System = window.AureliaSystem;
+            else {
+                eval(system);
+                eval(config);
+                window.AureliaSystem = window.System;
+            }
+            System.import('aurelia-bootstrapper')
+                .then(function(bootstrapper) {
+                    bootstrapper.runCustom();
+                });
+        });
+</script>

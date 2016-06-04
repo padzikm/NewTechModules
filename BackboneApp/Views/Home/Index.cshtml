@@ -1,0 +1,34 @@
+﻿
+<div id="backboneAppPage"></div>
+
+<link rel="stylesheet" href="/backboneapp/wwwroot/styles/site.css" />
+
+<script>
+    require(['text!/backboneapp/wwwroot/jspm_packages/system.js', 'text!/backboneapp/wwwroot/config.js'],
+        function(system, config) {
+            var Router = Backbone.Router.extend({
+                routes: {
+                    "backbone*any": function() {}
+                },
+                execute: function() { return false; }
+            });
+            var router = new Router();
+            Backbone.Events.once("changeRouteEvent",
+                function() {
+                    Backbone.history.handlers.splice(0, 1);
+                    window.System = null;
+                });
+            window.System = null;
+            if (window.BackboneSystem)
+                window.System = window.BackboneSystem;
+            else {
+                eval(system)
+                eval(config);
+                window.BackboneSystem = window.System;
+            }
+            System.import('app')
+                .then(function(bootstrapper) {
+                    bootstrapper.runCustom();
+                });
+        });
+</script>

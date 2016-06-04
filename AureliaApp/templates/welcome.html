@@ -1,0 +1,29 @@
+<template>
+  <section class="au-animate">
+    <form role="form">
+      <div class="form-group">
+        <label>Global $.aurelia</label>
+        <p class="help-block">${globalJq}</p>
+      </div>
+      <div class="form-group">
+        <label for="fn">Module $.aurelia</label>
+        <input type="text" value.bind="aureliaJq" class="form-control" id="fn">
+      </div>
+      <div>
+        <button click.delegate="setJq()" class="btn btn-default">Set $.aurelia in module</button>
+      </div>
+      <br/>
+      <div class="form-group">
+        <label>Global _.aurelia</label>
+        <p class="help-block">${globalUnder}</p>
+      </div>
+      <div class="form-group">
+        <label for="fn">Module $.aurelia</label>
+        <input type="text" value.bind="aureliaUnder" class="form-control" id="fn">
+      </div>
+      <div>
+        <button click.delegate="setUnder()" class="btn btn-default">Set _.aurelia in module</button>
+      </div>
+    </form>
+  </section>
+</template>

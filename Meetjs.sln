@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApp", "MainApp\MainApp.csproj", "{BE8830F7-E8DF-4802-9914-370F6B1F385F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AureliaApp", "AureliaApp\AureliaApp.csproj", "{D70DC9FB-8683-430C-9A81-7800A4019038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackboneApp", "BackboneApp\BackboneApp.csproj", "{0FB93D56-9204-4D0C-87F1-9A82C9E3E219}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE8830F7-E8DF-4802-9914-370F6B1F385F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8830F7-E8DF-4802-9914-370F6B1F385F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8830F7-E8DF-4802-9914-370F6B1F385F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8830F7-E8DF-4802-9914-370F6B1F385F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D70DC9FB-8683-430C-9A81-7800A4019038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D70DC9FB-8683-430C-9A81-7800A4019038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D70DC9FB-8683-430C-9A81-7800A4019038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D70DC9FB-8683-430C-9A81-7800A4019038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FB93D56-9204-4D0C-87F1-9A82C9E3E219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FB93D56-9204-4D0C-87F1-9A82C9E3E219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FB93D56-9204-4D0C-87F1-9A82C9E3E219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FB93D56-9204-4D0C-87F1-9A82C9E3E219}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
