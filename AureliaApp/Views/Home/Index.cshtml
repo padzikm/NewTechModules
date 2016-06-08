@@ -8,31 +8,50 @@
 <link rel="stylesheet" href="/aureliaapp/wwwroot/styles/site.css" />
 
 <script>
-    require(['text!/aureliaapp/wwwroot/jspm_packages/system.js', 'text!/aureliaapp/wwwroot/config.js'],
-        function(system, config) {
+    if (window.AureliaSystem && window.AureliaAppRoot){
+        var Router = Backbone.Router.extend({
+                routes: {
+                    "aureliaApp*any": function() {}
+                },
+                execute: function() { return false; }
+        });
+        var router = new Router();
+        window.System = window.AureliaSystem;
+        var rootElem = document.querySelectorAll('[aurelia-app]')[0];
+        var aurelia = window.AureliaAppRoot;
+        aurelia.host = rootElem;
+        aurelia.hostConfigured = false;
+        if(window.Backbone){
+            Backbone.Events.once("changeRouteEvent", function() {
+                aurelia.root.unbind();
+                aurelia.root.detached();
+		        aurelia.hostSlot.unbind();
+                aurelia.hostSlot.detached();
+                aurelia.hostSlot.removeAll();
+                aurelia.root.viewModel.router.deactivate();
+                Backbone.history.handlers.splice(0, 1);
+                window.System = null;
+	        });
+        }
+        aurelia.setRoot();
+    }
+    else{
+        require(['text!/aureliaapp/wwwroot/jspm_packages/system.js', 'text!/aureliaapp/wwwroot/config.js'], function(system, config) {
             var Router = Backbone.Router.extend({
                 routes: {
-                    "aurelia*any": function() {}
+                    "aureliaApp*any": function() {}
                 },
                 execute: function() { return false; }
             });
             var router = new Router();
-            Backbone.Events.once("changeRouteEvent",
-                function() {
-                    Backbone.history.handlers.splice(0, 1);
-                    window.System = null;
-                });
-            window.System = null;
-            if (window.AureliaSystem)
-                window.System = window.AureliaSystem;
-            else {
-                eval(system);
-                eval(config);
-                window.AureliaSystem = window.System;
-            }
-            System.import('aurelia-bootstrapper')
-                .then(function(bootstrapper) {
-                    bootstrapper.runCustom();
-                });
+            Backbone.Events.once("changeRouteEvent", function() {
+                Backbone.history.handlers.splice(0, 1);
+                window.System = null;
+            });
+            eval(system);
+            eval(config);
+            window.AureliaSystem = window.System;
+            System.import('aurelia-bootstrapper');
         });
+    }
 </script>

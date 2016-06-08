@@ -13,6 +13,7 @@ export function configure(aurelia: Aurelia) {
 		    aurelia.hostSlot.detached();
 		    aurelia.hostSlot.removeAll();
 		    aurelia.root.viewModel.router.deactivate();
+        window.AureliaAppRoot = aurelia;
 	    });
     }
   //Uncomment the line below to enable animation.
