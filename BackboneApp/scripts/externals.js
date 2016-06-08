@@ -2,7 +2,7 @@ define(['marionette', './externals.html!text'], function(Marionette, Template){
     var Externals = Marionette.ItemView.extend({
         template: Template,
         events:{
-            'click button': function(e){
+            'click .button-back-externals': function(e){
                 e.preventDefault();
                 var _this = this;
                 requirejs(['wwwroot/commonModule/common.js'], function(common){
