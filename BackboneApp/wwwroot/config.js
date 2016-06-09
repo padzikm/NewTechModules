@@ -8,8 +8,38 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+  bundles: {
+    "dist/app-build.js": [
+      "app.js",
+      "externals.html!github:systemjs/plugin-text@0.0.3.js",
+      "externals.js",
+      "github:jspm/nodelibs-process@0.1.2.js",
+      "github:jspm/nodelibs-process@0.1.2/index.js",
+      "github:marionettejs/backbone.babysitter@0.1.12.js",
+      "github:marionettejs/backbone.babysitter@0.1.12/lib/backbone.babysitter.js",
+      "github:marionettejs/backbone.marionette@2.4.7.js",
+      "github:marionettejs/backbone.marionette@2.4.7/lib/core/backbone.marionette.js",
+      "github:marionettejs/backbone.wreqr@1.3.7.js",
+      "github:marionettejs/backbone.wreqr@1.3.7/lib/backbone.wreqr.js",
+      "layout.html!github:systemjs/plugin-text@0.0.3.js",
+      "layout.js",
+      "menu.html!github:systemjs/plugin-text@0.0.3.js",
+      "menu.js",
+      "npm:backbone@1.3.3.js",
+      "npm:backbone@1.3.3/backbone.js",
+      "npm:jquery@2.2.0.js",
+      "npm:jquery@2.2.0/dist/jquery.js",
+      "npm:process@0.11.3.js",
+      "npm:process@0.11.3/browser.js",
+      "npm:underscore@1.8.3.js",
+      "npm:underscore@1.8.3/underscore.js",
+      "router.js",
+      "welcome.html!github:systemjs/plugin-text@0.0.3.js",
+      "welcome.js"
+    ]
+  },
   meta: {
-    "npm:jquery@2.2.4/dist/jquery.js": {
+    "npm:jquery@2.2.0/dist/jquery.js": {
       "format": "cjs"
     },
     "github:marionettejs/backbone.marionette@2.4.7/lib/core/backbone.marionette": {
@@ -22,7 +52,7 @@ System.config({
     "backbone.wreqr": "github:marionettejs/backbone.wreqr@1.3.7",
     "fetch": "github:github/fetch@0.11.0",
     "font-awesome": "npm:font-awesome@4.5.0",
-    "jquery": "npm:jquery@2.2.4",
+    "jquery": "npm:jquery@2.2.0",
     "marionette": "github:marionettejs/backbone.marionette@2.4.7",
     "text": "github:systemjs/plugin-text@0.0.3",
     "underscore": "npm:underscore@1.8.3",
@@ -69,35 +99,5 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "process": "github:jspm/nodelibs-process@0.1.2"
     }
-  },
-  bundles: {
-    "dist/app-build.js": [
-      "app.js",
-      "externals.html!github:systemjs/plugin-text@0.0.3.js",
-      "externals.js",
-      "github:jspm/nodelibs-process@0.1.2.js",
-      "github:jspm/nodelibs-process@0.1.2/index.js",
-      "github:marionettejs/backbone.babysitter@0.1.12.js",
-      "github:marionettejs/backbone.babysitter@0.1.12/lib/backbone.babysitter.js",
-      "github:marionettejs/backbone.marionette@2.4.7.js",
-      "github:marionettejs/backbone.marionette@2.4.7/lib/core/backbone.marionette.js",
-      "github:marionettejs/backbone.wreqr@1.3.7.js",
-      "github:marionettejs/backbone.wreqr@1.3.7/lib/backbone.wreqr.js",
-      "layout.html!github:systemjs/plugin-text@0.0.3.js",
-      "layout.js",
-      "menu.html!github:systemjs/plugin-text@0.0.3.js",
-      "menu.js",
-      "npm:backbone@1.3.3.js",
-      "npm:backbone@1.3.3/backbone.js",
-      "npm:jquery@2.2.4.js",
-      "npm:jquery@2.2.4/dist/jquery.js",
-      "npm:process@0.11.3.js",
-      "npm:process@0.11.3/browser.js",
-      "npm:underscore@1.8.3.js",
-      "npm:underscore@1.8.3/underscore.js",
-      "router.js",
-      "welcome.html!github:systemjs/plugin-text@0.0.3.js",
-      "welcome.js"
-    ]
   }
 });

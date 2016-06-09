@@ -1,3 +1,6 @@
+import {singleton} from 'aurelia-framework'
+
+@singleton(false)
 export class Externals {
   text = "";
   decoratedText = "";

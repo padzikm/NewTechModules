@@ -2,11 +2,11 @@
   <section class="au-animate">
     <form role="form">
       <div class="form-group">
-        <label>Global $.aurelia</label>
+        <label>Global $.aurelia - ${globalJqVersion}</label>
         <p class="help-block">${globalJq}</p>
       </div>
       <div class="form-group">
-        <label for="fn">Module $.aurelia</label>
+        <label for="fn">Module $.aurelia - ${moduleJqVersion}</label>
         <input type="text" value.bind="aureliaJq" class="form-control" id="fn">
       </div>
       <div>
@@ -14,11 +14,11 @@
       </div>
       <br/>
       <div class="form-group">
-        <label>Global _.aurelia</label>
+        <label>Global _.aurelia - ${globalUnderVersion}</label>
         <p class="help-block">${globalUnder}</p>
       </div>
       <div class="form-group">
-        <label for="fn">Module _.aurelia</label>
+        <label for="fn">Module _.aurelia - ${moduleUnderVersion}</label>
         <input type="text" value.bind="aureliaUnder" class="form-control" id="fn">
       </div>
       <div>

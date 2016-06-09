@@ -2,11 +2,6 @@ System.config({
   baseURL: "/aureliaapp/wwwroot/",
   defaultJSExtensions: true,
   transpiler: "none",
-  meta: {
-    "npm:jquery@2.2.4/dist/jquery.js": {
-      "format": "cjs"
-    }
-  },
   paths: {
     "*": "src/*",
     "dist/*": "dist/*",
@@ -107,11 +102,16 @@ System.config({
       "npm:aurelia-templating@1.0.0-beta.1.2.0/aurelia-templating.js",
       "npm:jquery@2.2.4.js",
       "npm:jquery@2.2.4/dist/jquery.js",
-      "npm:underscore@1.8.3.js",
-      "npm:underscore@1.8.3/underscore.js",
+      "npm:underscore@1.8.1.js",
+      "npm:underscore@1.8.1/underscore.js",
       "welcome.html!github:systemjs/plugin-text@0.0.3.js",
       "welcome.js"
     ]
+  },
+  meta: {
+    "npm:jquery@2.2.4/dist/jquery.js": {
+      "format": "cjs"
+    }
   },
   map: {
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.0-beta.1.2.0",
@@ -131,7 +131,7 @@ System.config({
     "font-awesome": "npm:font-awesome@4.5.0",
     "jquery": "npm:jquery@2.2.4",
     "text": "github:systemjs/plugin-text@0.0.3",
-    "underscore": "npm:underscore@1.8.3",
+    "underscore": "npm:underscore@1.8.1",
     "npm:aurelia-animator-css@1.0.0-beta.1.2.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1.2.0",
       "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.2.0",
